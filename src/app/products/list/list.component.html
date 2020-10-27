@@ -1,0 +1,8 @@
+<div style="display: flex">
+    <app-custom-card *ngFor="let product of Product"
+      [photoPath]="product.photo"
+      [title]="product.name"
+      [subtitle]="product.quantity +' '+ product.units"
+      [description]="product.expirationDate.getDate()+'-'+product.expirationDate.getMonth()+'-'+product.expirationDate.getFullYear()">
+    </app-custom-card>
+</div>
