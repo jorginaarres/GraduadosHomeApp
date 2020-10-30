@@ -14,14 +14,16 @@ export class ListComponent implements OnInit {
       quantity: 1,
       units: 'bola',
       expirationDate: new Date('2020-01-16'),
-      photo: 'https://as01.epimg.net/deporteyvida/imagenes/2018/05/08/portada/1525772857_240454_1525773041_noticia_normal.jpg'
+      photo: 'https://as01.epimg.net/deporteyvida/imagenes/2018/05/08/portada/1525772857_240454_1525773041_noticia_normal.jpg',
+      reserved: false
     },
     {
       name: 'Llet',
       quantity: 1,
       units: 'litre',
       expirationDate: new Date('2020-01-16'),
-      photo: 'https://ecovianda.cat/wp-content/uploads/llet-fresca-de-vaca-ecologica.jpg'
+      photo: 'https://ecovianda.cat/wp-content/uploads/llet-fresca-de-vaca-ecologica.jpg',
+      reserved: true
     },
   ];
 
