@@ -1,8 +1,11 @@
 <div style="display: flex">
     <app-custom-card *ngFor="let product of Product"
+      (event1)="requestProduct($event)"
       [photoPath]="product.photo"
       [title]="product.name"
-      [subtitle]="product.quantity +' '+ product.units +' '+ product.reserved"
-      [description]="product.expirationDate.getDate()+'-'+product.expirationDate.getMonth()+'-'+product.expirationDate.getFullYear()">
+      [subtitle]="product.quantity +' '+ product.units"
+      [description]="product.owner"
+      [status]="product.reserved"
+      [date]="product.expirationDate.getDate()+ '-' +product.expirationDate.getMonth()+ '-' +product.expirationDate.getFullYear()">
     </app-custom-card>
 </div>

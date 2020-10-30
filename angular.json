@@ -126,5 +126,10 @@
   "defaultProject": "GraduadosHomeApp",
   "cli": {
     "analytics": false
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss"
+    }
   }
 }

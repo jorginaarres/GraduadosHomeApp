@@ -1,0 +1,97 @@
+$card-width: 260px;
+$card-height: 400px;
+
+.card {
+  width: $card-width;
+  height: $card-height;
+  padding: 0;
+  margin: 15px;
+
+  img {
+    width: $card-width;
+    height: 194px;
+  }
+}
+
+.title {
+  padding: 0 24px 0 16px;
+  width: $card-width;
+  height: 44px;
+  position: relative;
+
+  h6 {
+    font-size: 21pt;
+    float: bottom;
+    position: absolute;
+    bottom: 0;
+  }
+  button {
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+  }
+}
+
+.subtitle {
+  padding: 0 24px 0 16px;
+  width: $card-width;
+  height: 44px;
+  position: relative;
+
+  div {
+    font-size: 17pt;
+    float: bottom;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.description {
+  padding: 0 24px 0 16px;
+  width: $card-width;
+  height: 44px;
+  position: relative;
+
+  span {
+    font-size: 17pt;
+    float: bottom;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.date {
+  padding: 0 24px 0 16px;
+  width: $card-width;
+  height: 44px;
+  position: relative;
+
+  span {
+    font-size: 15pt;
+    float: bottom;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@mixin circle {
+  display: block;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  top: 27px;
+  left: 90px;
+  border: solid 1px black;
+}
+
+.red-circle {
+  @include circle;
+  background-color: red;
+}
+
+.green-circle {
+  @include circle;
+  background-color: green;
+}
+

@@ -2,11 +2,18 @@
   <img *ngIf="photoPath" alt="img" [src]="photoPath">
   <div class="title">
     <h6>{{title}}</h6>
+    <button (click)="emmitEvent1()" [disabled]="status" mat-mini-fab color="primary">
+      <span class="material-icons"> local_dining </span>
+    </button>
   </div>
   <div class="subtitle">
-    <span>{{subtitle}}</span>
+    <div>{{subtitle}}</div>
+    <div [ngClass]="{'red-circle': status,'green-circle': !status}"> </div>
   </div>
   <div class="description">
     <span>{{description}}</span>
+  </div>
+  <div class="date">
+    <span>{{date}}</span>
   </div>
 </mat-card>

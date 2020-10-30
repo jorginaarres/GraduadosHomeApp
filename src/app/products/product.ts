@@ -14,6 +14,9 @@ export class Product {
   // Path de la foto del producte
   photo: string;
 
-  //True, el producte es d'un reservat. False altrament.
+  // True, el producte es d'un reservat. False altrament.
   reserved: boolean;
+
+  // Propietari del producte
+  owner: string;
 }
