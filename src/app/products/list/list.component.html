@@ -6,6 +6,6 @@
       [subtitle]="product.quantity +' '+ product.units"
       [description]="product.owner"
       [status]="product.reserved"
-      [date]="product.expirationDate.getDate()+ '-' +product.expirationDate.getMonth()+ '-' +product.expirationDate.getFullYear()">
+      [date]="product.expirationDate.getDate()+ '-' + (1+product.expirationDate.getMonth()) +'-' +product.expirationDate.getFullYear()">
     </app-custom-card>
 </div>
