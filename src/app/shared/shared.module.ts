@@ -6,10 +6,15 @@ import { CustomCardComponent } from './custom-card/custom-card.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { InfoDialogComponent } from './info-dialog/info-dialog.component';
+import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 
 
 @NgModule({
-  declarations: [HeaderComponent, CustomCardComponent],
+  declarations: [
+    HeaderComponent,
+    CustomCardComponent,
+    InfoDialogComponent],
   exports: [
     HeaderComponent,
     CustomCardComponent
@@ -19,7 +24,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    PerfectScrollbarModule
   ]
 })
 export class SharedModule { }

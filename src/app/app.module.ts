@@ -6,6 +6,7 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
+import {PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface, PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBqWKClS7zL1FwTmZbrjFR9oj4o1gVNKfY',
@@ -18,6 +19,12 @@ const firebaseConfig = {
   measurementId: 'G-HLV14705N5'
 };
 
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true,
+  wheelSpeed: 0.15,
+  maxScrollbarLength: 100
+};
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -26,9 +33,15 @@ const firebaseConfig = {
     BrowserAnimationsModule,
     SharedModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    PerfectScrollbarModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    }
+  ],
   bootstrap: [AppComponent]
 })
 

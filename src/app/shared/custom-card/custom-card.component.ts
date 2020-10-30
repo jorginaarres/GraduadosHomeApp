@@ -1,6 +1,8 @@
 import {Component, Input, OnInit, Output} from '@angular/core';
 import Item = firebase.analytics.Item;
 import { EventEmitter } from '@angular/core';
+import {InfoDialogComponent} from '../info-dialog/info-dialog.component';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-custom-card',
@@ -18,9 +20,22 @@ export class CustomCardComponent implements OnInit {
 
   @Output() event1 = new EventEmitter<any>();
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openInfoDialog(): void {
+    const dialogRef = this.dialog.open(InfoDialogComponent, {
+      data: {
+        photoPath: this.photoPath,
+        title: this.title,
+        subtitle: this.subtitle,
+        description: this.description,
+        status: this.status,
+        date: this.date,
+      }
+    });
   }
 
   emmitEvent1(): void {

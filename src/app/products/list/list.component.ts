@@ -33,7 +33,7 @@ export class ListComponent implements OnInit {
       units: 'barrita',
       expirationDate: new Date('2020-12-24'),
       photo: 'https://media1.cestaclick.es/149-thickbox_default/Valor-Chocolatinas-Huesitos-Original-6-Unidades-120g.jpg',
-      reserved: true,
+      reserved: false,
       owner: 'Juan Salmeron'
     },
   ];

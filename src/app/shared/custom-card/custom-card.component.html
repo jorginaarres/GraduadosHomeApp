@@ -1,4 +1,7 @@
 <mat-card class="card">
+  <button class="info-button" (click)="openInfoDialog()" mat-icon-button color="primary">
+    <span class="material-icons"> info </span>
+  </button>
   <img *ngIf="photoPath" alt="img" [src]="photoPath">
   <div class="title">
     <h6>{{title}}</h6>

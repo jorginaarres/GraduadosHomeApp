@@ -33,16 +33,15 @@ $card-height: 400px;
 }
 
 .subtitle {
+  display: flex;
   padding: 0 24px 0 16px;
   width: $card-width;
   height: 44px;
-  position: relative;
 
   div {
     font-size: 17pt;
     float: bottom;
-    position: absolute;
-    bottom: 0;
+    margin-right: 10px;
   }
 }
 
@@ -79,9 +78,7 @@ $card-height: 400px;
   border-radius: 50%;
   height: 15px;
   width: 15px;
-  position: absolute;
-  top: 27px;
-  left: 90px;
+  margin-top: 2px;
   border: solid 1px black;
 }
 
@@ -93,5 +90,10 @@ $card-height: 400px;
 .green-circle {
   @include circle;
   background-color: green;
+}
+
+.info-button {
+  position: absolute;
+  right: 0;
 }
 
