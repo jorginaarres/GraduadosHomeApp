@@ -1,0 +1,5 @@
+.app-list__content {
+  flex-wrap:wrap;
+  justify-content: center;
+  display: flex;
+}
