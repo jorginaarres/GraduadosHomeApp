@@ -1,0 +1,11 @@
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+
+$width: 400px;
+$height: 500px;
+
+.card {
+  width: $width;
+  height: $height;
+  padding: 0;
+  margin: 15px;
+}

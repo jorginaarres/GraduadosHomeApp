@@ -1,0 +1,22 @@
+<mat-card class="card">
+  <img *ngIf="photoPath" alt="img" [src]="photoPath">
+
+  <div class="title">
+    <h1>{{title}}</h1>
+  </div>
+
+  <div class="list-and-button">
+    <h2>Ingredients</h2>
+    <button (click)="openIngredientDialog()" mat-mini-fab color="primary">
+      <span class="material-icons"> more_horiz </span>
+    </button>
+  </div>
+
+  <div class="list-and-button">
+    <h2>Recepta</h2>
+    <button (click)="openRecipeDialog()" mat-mini-fab color="primary">
+      <span class="material-icons"> receipt </span>
+    </button>
+  </div>
+    
+  </mat-card>

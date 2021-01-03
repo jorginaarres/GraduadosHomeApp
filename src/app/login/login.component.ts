@@ -16,4 +16,8 @@ export class LoginComponent implements OnInit {
   goToProducts(): void {
     this.router.navigateByUrl('products');
   }
+
+  goToRecipes(): void {
+    this.router.navigateByUrl('recipes');
+  }
 }

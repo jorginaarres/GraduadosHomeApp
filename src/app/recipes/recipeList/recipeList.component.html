@@ -1,0 +1,9 @@
+<div class="app-list__content">
+    <recipe-custom-card *ngFor="let recipe of Recipe" 
+      (event1)="requestRecipe($event)"
+      [photoPath]="recipe.photo"
+      [title]="recipe.name"
+      [ingredients]="recipe.ingredients"
+      [steps]="recipe.instructions">
+    </recipe-custom-card>
+</div>
